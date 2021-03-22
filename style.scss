@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    color: #fff;
+    position: relative; 
+}
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    position: fixed;    
+    font-family: Audiowide;
+    margin: 30px 0 0 30px;
+}
+section {
+    height: 100vh;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .para {
+        margin: 0 500px;
+        padding: 20px;
+        background-color: #0303036b;
+        font-size: 1.2vw;
+        border-radius: 10px;
+    }
+    $colors: white, #F64747, #22A7F0, #F9690E, #9B59B6, #03C9A9, #ffcc00;
+    @for $i from 1 through length($colors) {
+      &:nth-child(#{$i}) {
+        background: nth($colors, $i)
+      }
+    }
+  }
+  
+  .nav {
+    &__wrapper {
+      position: fixed;
+      height: 100%;
+      padding: 20px;
+  
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+    }
+  
+    & {
+      margin: 0 0 50px 30px; 
+    }
+    &__counter {
+      font-size: 24px;
+      transition: all 0.15s ease-out;
+      font-family: Audiowide;
+    }
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      margin: 0 0 0.25em;
+      width: 300px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    }
+    &__body {
+      font-weight: 100;
+      font-size: 1.6rem;
+      font-size: 1.6rem;
+      width: 300px;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: height 0.3s ease-out, opacity 0.2s ease-out;
+    }
+  
+    li {
+      position: relative;
+      transition: all 0.3s ease-out;
+      margin-bottom: 1em;
+  
+      &:after {
+        content: '';
+        display: block;
+        border-left: 2px solid white;
+        border-top: 2px solid white;
+        height: 250px;
+        width: 20px;
+        position: absolute;
+        left: -30px;
+        top: 15px;
+      }
+  
+      a {
+        display: block;
+        padding: 0;
+        color: #fff;
+        transition: all 0.15s ease-out;
+  
+        &:hover {
+          background-color: transparent;
+          padding-left: 1em
+        }
+        &:focus {
+          background-color: transparent;
+        }
+      }
+  
+      &.active {
+        pointer-events: none;
+        padding-left: 1em;
+  
+        &:after {
+          width: 35px;
+          height: 400px;
+          top: 35px;
+        }
+  
+        .nav__counter {
+          font-size: 48px;
+        }
+        .nav__title {
+          height: 40px;
+          opacity: 1;
+          overflow: visible;
+        }
+        .nav__body {
+          height: 100px;
+          opacity: 1;
+          overflow: visible;
+        }
+      }
+  
+    }
+  
+  }
+
+  #section1 {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/spacexbgnew.png');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section2 {
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/falcon1c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section3{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/nasaspacex.jpg');
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section4{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/merlintestt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section5{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/falcon1fail.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section6{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/falcon1liftoff.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section7{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/iss.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section8{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/crewdgif.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section9{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/crewdpara.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section10{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/BFRpix.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  #section11{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/starship-sn5-150m-hop.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  #section12{
+    height: 100vh;
+    min-height: 500px;
+    background-image: url('../assets/crewdcrew2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  @media (max-width: 1920px) {
+      section{
+          .para{
+              margin: 0 300px;
+          }
+      }
+  
+}
+  @media (max-width: 1467px) {
+    .nav__wrapper {
+        font-size: .5rem; //check to see if live update is misfunctioned
+    }
+      section{
+          .para{
+              font-size: 2rem;
+              margin: 0 25px 0 370px;
+          }
+      }
+}
+  @media (max-width: 700px) {
+      .nav__wrapper {
+          display: none;
+      }
+    section{
+          .para{
+              font-size: 2rem;
+              margin: 0 25px 0 25px;
+          }
+      }
+}
